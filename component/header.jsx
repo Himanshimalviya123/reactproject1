@@ -1,24 +1,19 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-const Header=()=>{ 
-    return(
-    <>
-  <div id="nav">
-  <Navbar bg="dark" data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand href="#home">HEALET</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#home">HOME</Nav.Link>
-            <Nav.Link href="#features">ABOUT</Nav.Link>
-            <Nav.Link href="#pricing">SHOP</Nav.Link>     
-            <Nav.Link href="#pricing">BLOG</Nav.Link>          
-          </Nav>
-        </Container>
-      </Navbar>
-      </div>
- 
-    </>
+import { FaShoppingCart } from "react-icons/fa";
+import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
-)}
+const Header=()=>{
+const cartData = useSelector(state=>state.mycart.cart);
+const cartLength= cartData.length;
+const navigate= useNavigate();
+  return(
+        <>
+          <div id="header"> 
+            {cartLength}
+          <FaShoppingCart  onClick={()=>{navigate("/mycart")}}  style={{cursor:"pointer"}}/>
+          </div>
+        </>
+    )
+}
+
 export default Header;

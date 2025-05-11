@@ -1,9 +1,12 @@
 import { useSelector, useDispatch } from "react-redux";
 import Table from 'react-bootstrap/Table';
-import { FaPlusSquare } from "react-icons/fa";
-import { FaMinusSquare } from "react-icons/fa";
-import { qtyIncr, qtyDecr, proRemove } from "../cartSlice";
+import { FaRegPlusSquare } from "react-icons/fa";
+
+import { FaRegMinusSquare } from "react-icons/fa";
+
+import { qtyIncr, qtyDecr, proRemove } from "./cartSlice";
 import { FaIndianRupeeSign } from "react-icons/fa6";
+
 const MyCart =()=>{
     const cartData = useSelector(state=>state.mycart.cart);
     const dispatch = useDispatch();
@@ -20,9 +23,10 @@ const MyCart =()=>{
                 <td> {key.name} </td>
                 <td> {key.category} </td>
                 <td style={{fontSize:"20px"}}> 
-                <FaMinusSquare   onClick={()=>{dispatch(qtyDecr({id:key.id}))}} style={{cursor:"pointer"}} />   
+                <FaRegMinusSquare   onClick={()=>{dispatch(qtyDecr({id:key.id}))}} style={{cursor:"pointer"}} />   
                     {key.qnty}
-                <FaPlusSquare 
+                    <FaRegPlusSquare 
+
                 onClick={()=>{dispatch(qtyIncr({id:key.id}))}} style={{cursor:"pointer"}} />
                      </td>
                 <td> {key.price} </td>
@@ -39,7 +43,8 @@ const MyCart =()=>{
     return(
         <>
            <h1> My Cart Products</h1> 
-           <h2 align="center"><FaIndianRupeeSign />  : {TotAmount}</h2> 
+           <h2 align="center"><FaIndianRupeeSign />
+           : {TotAmount}</h2> 
            <hr />
            <Table striped bordered hover>
       <thead>

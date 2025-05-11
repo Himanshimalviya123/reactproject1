@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "./Layout";
-import Home from "./pages/Home";
-import MyCart from "./pages/MyCart";
-import MenWatches from "./pages/MenWatches";
-import WoMenWatches from "./pages/WoMenWatches";
-import KidsWatches from "./pages/KidsWatches";
+import Layout from "../pages/Layout";
+import Home from "../pages/Home";
+import MyCart from "../pages/MyCart";
+import MenWatches from "../pages/MenWatches";
+import WoMenWatches from "../pages/WoMenWatches";
+import KidsWatches from "../pages/KidsWatches";
 
 const App=()=>{
   return(

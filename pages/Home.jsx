@@ -4,13 +4,13 @@ import b2 from "../images/b2.jpg";
 import b3 from "../images/b3.jpg";
 
 import { useState, useEffect } from 'react';
-import BackendURL from "../config/backendUrl";
+import backendUrl from '../vonfiguration/backendUrl';
 import axios from 'axios';
 
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-import { addToCart } from '../cartSlice';
+import { addToCart } from './cartSlice';
 import { useDispatch } from 'react-redux';
 
 const Home=()=>{
@@ -19,7 +19,7 @@ const Home=()=>{
 
  const loadData=async()=>{
     
-    const response = await axios.get(BackendURL);
+    const response = await axios.get(backendUrl);
     console.log(response.data);
     setMydata(response.data);
  }

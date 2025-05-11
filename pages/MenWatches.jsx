@@ -1,16 +1,13 @@
-import Carousel from 'react-bootstrap/Carousel';
-import b1 from "../images/b1.webp";
-import b2 from "../images/b2.jpg";
-import b3 from "../images/b3.jpg";
+
 
 import { useState, useEffect } from 'react';
-import BackendURL from "../config/backendUrl";
+
 import axios from 'axios';
 
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-import { addToCart } from '../cartSlice';
+import { addToCart } from './cartSlice';
 import { useDispatch } from 'react-redux';
 
 const MenWatches=()=>{

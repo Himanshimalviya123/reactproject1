@@ -1,18 +1,24 @@
-import Footer from "./component/Footer";
-import Header from "./component/Header";
-import TopMenu from "./component/TopMenu";
 import { Outlet } from "react-router-dom";
+import Footer from "../component/footer";
+import TopMenu from "../component/topmenu";
+import Header from "../component/header";
+
 
 const Layout=()=>{
     return(
         <>
-        <div id="topHeader"> 
-        <Header/>
-        <TopMenu/>
-        </div>
+         <TopMenu/>
          
-             <Outlet/>
-          <Footer/>
+        <div id="topHeader"> 
+        
+     
+      
+         
+       
+           <Outlet/>
+             <Footer/>
+     
+        </div>
           
 
         </>

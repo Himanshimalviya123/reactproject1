@@ -53,34 +53,29 @@ const Home=()=>{
 
 
 
-    return(
+  
+           return(
         <>
-
-             <Carousel>
+            <Carousel fade>
       <Carousel.Item>
-         <img src={b1} width="100%" height="250" />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+       <img src={b1}  width="100%" height="450px"/>
+        <Carousel.Caption id="caption1">
+          <h3 className="descrip1">Smart Shopping
+            <br/>Trusted by Millions
+          </h3>
+          <button className="btn1">Shop Now</button>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-      <img src={b2} width="100%" height="250" />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <img src={b2} alt="web" width="100%" height="450px"/>
+        <Carousel.Caption id="caption">
+        <h3 className="descrip">Smart Shopping
+            <br/>Trusted by Millions
+          </h3>
+          <button className="btn2">Shop Now</button>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
-      <img src={b3} width="100%" height="250" />
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>       
+     </Carousel>
 
       <h1> Our Latest Products</h1>
       <div id='cardData'>

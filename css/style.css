@@ -33,3 +33,14 @@ h1{
     z-index: 3;
 
 }
+.product{
+    display: grid;
+    grid-template-columns: repeat(8,250px);
+    align-items: center;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    text-align: center;
+}

@@ -5,23 +5,22 @@ import { Link } from 'react-router-dom';
 const TopMenu=()=>{
     return(
         <>
-        <Navbar bg="primary" data-bs-theme="dark">
+        <Navbar  id="top">
         <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link as={Link} to="home">Home</Nav.Link>
-            <Nav.Link as={Link} to="menwatches">Men Watches</Nav.Link>
-            <Nav.Link as={Link} to="womenwatches">Women Watches</Nav.Link>
-            <Nav.Link as={Link} to="kidswatches">Kids Watches</Nav.Link>
-            <Nav.Link as={Link} to="mycart">Cart</Nav.Link>
-            <Nav.Link as={Link} to="home">Search</Nav.Link>
-           
+          <Navbar.Brand href="#home"id="bar" ></Navbar.Brand>
+          <Nav className="me-auto" >
+            <Nav.Link as={Link} to="home" id="nav1">Home</Nav.Link>
+            <Nav.Link as={Link} to="home" id="nav">Women Western</Nav.Link>
+            <Nav.Link as={Link} to="home" id="nav">Menswear</Nav.Link>
+            <Nav.Link as={Link} to="home" id="nav">Jewellery</Nav.Link>
+          
+            
+            
           </Nav>
         </Container>
       </Navbar>
-         
+          
         </>
     )
 }
-
 export default TopMenu;
